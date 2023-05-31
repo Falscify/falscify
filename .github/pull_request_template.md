@@ -25,7 +25,7 @@ This is simply a reminder of what needs to be checked before merging your code.*
 - [ ] I have added necessary documentation (if appropriate).
 - [ ] My changes generate no new warnings.
 - [ ] I have commented my code, particularly in hard-to-understand areas.
-- [ ] My branch is up to date with {{ .head }}
+- [ ] My branch is up to date with `f1lem0n/falscify/main`
 
 ## Further comments 🧠
 
