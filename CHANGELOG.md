@@ -1,20 +1,23 @@
 # Change Log
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. Please, remember to add new changes on top of the older ones.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+---
  
-## [Unreleased] - yyyy-mm-dd
+## [v0.1.0 alpha] 2023-31-05
  
-Here we write upgrading notes for brands. It's a team effort to make them as
-straightforward as possible.
+We established our mission, first workflows and added some documentation. We have also created a (temporary) logo.
  
 ### Added
-- [PROJECTNAME-XXXX](http://tickets.projectname.com/browse/PROJECTNAME-XXXX)
-  MINOR Ticket title goes here.
-- [PROJECTNAME-YYYY](http://tickets.projectname.com/browse/PROJECTNAME-YYYY)
-  PATCH Ticket title goes here.
+- Readme
+- Changelog
+- Code of Conduct
+- Basic workflows and templates
+- Logo
  
 ### Changed
- 
+ Nothing
 ### Fixed
+ Nothing

@@ -1,6 +1,5 @@
 ![](https://img.shields.io/badge/license-None-000000.svg)
 ![](https://img.shields.io/badge/github-v0.1.0_alpha-519dd9.svg)
-![](https://progress-bar.dev/1)
 
 ![Project Logo](graphics/inline_gh.png)
 
@@ -9,6 +8,7 @@
 ## Table of Contents
 - [General info](#general-info)
 - [Usage](#usage)
+- [Links](#links)
 - [Code owners](#code-owners)
 
 ## General info
@@ -20,7 +20,7 @@ Currently, we as scientists face the problem that only positive research results
 
 ## Links
 
-- [Code of conduct](https://github.com/f1lem0n/falscify/blob/main/CODE_OF_CONDUCT.md)
+- [Code of Conduct](https://github.com/f1lem0n/falscify/blob/main/CODE_OF_CONDUCT.md)
 - [Changelog](https://github.com/f1lem0n/falscify/blob/main/CHANGELOG.md)
 
 ## Code owners
