@@ -1,8 +1,10 @@
 # Change Log
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. Please, remember to add new changes on top of the older ones.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+---
  
 ## [v0.1.0 alpha] 2023-31-05
  
