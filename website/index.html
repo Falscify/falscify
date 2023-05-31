@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="formatting.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>falscify | Home</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../graphics/logotype.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/css/main.css">
 </head>
+
 <body>
- <div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="news.html">News</a>
-  <a href="about.html">About</a>
-  <a href="login.html">Sign in</a>
-  <a href="register.html">Sign up</a>
- </div>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">
+        <img src="../graphics/logotype.png" height=30rem>
+        <h1>falscify</h1>
+      </a>
+
+      <div class="menu" id="menu">
+        <ul class="list">
+          <li class="list-item">
+            <a href="index.html" class="list-link current">Home</a>
+          </li>
+          <li class="list-item">
+            <a href="recent.html" class="list-link">Recent</a>
+          </li>
+          <li class="list-item">
+            <a href="explore.html" class="list-link">Explore</a>
+          </li>
+          <li class="list-item">
+            <a href="about.html" class="list-link">About</a>
+          </li>
+          <li class="list-item screen-l-hidden">
+            <a href="login.html" class="list-link">Sign in</a>
+          </li>
+          <li class="list-item screen-l-hidden">
+            <a href="register.html" class="list-link">Sign up</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list list-right">
+        <button class="btn place-items-center" id="theme-toggle-btn">
+          <i class="ri-sun-line sun-icon"></i>
+          <i class="ri-moon-line moon-icon"></i>
+        </button>
+
+        <button class="btn place-items-center screen-l-hidden menu-toggle-icon" id="menu-toggle-icon">
+          <i class="ri-menu-3-line open-menu-icon"></i>
+          <i class="ri-close-line close-menu-icon"></i>
+        </button>
+
+        <button type="button" class="btn login-btn screen-s-hidden">
+          <a href="login.html">Sign in</a>
+        </button>
+        <button class="btn register-btn screen-s-hidden">
+          <a href="register.html">Sign up</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="container search-bar-container">
+    <h2>Let's revolutionize science, together!</h2>
+    <div class="search-bar">
+      <input type="search" id="search" placeholder="Search">
+      <button class="btn" id="search-btn">
+        <i class="ri-search-line" type="submit"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Report Submission Button -->
+  <div class="container submission-btn-container">
+    <a href="submit.html">
+      <button class="btn submission-btn">
+        <h2>Submit report</h2>
+        <i class="ri-check-line"></i>
+      </button>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer section">
+    <div class="footer-container container d-grid">
+      <div class="company-data">
+        <p class="company-description">
+          Falscify is a P2P-driven, innovative database containing
+          statistically insignificant results of scientific research
+          in many different fields of science.
+        </p>
+
+        <ul class="list social-media">
+          <li class="list-item">
+            <a href="#" class="list-link">
+              <i class="ri-linkedin-line"></i>
+            </a>
+
+            <a href="#" class="list-link">
+              <i class="ri-twitter-line"></i>
+            </a>
+
+            <a href="#" class="list-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </li>
+        </ul>
+        <span class="copyright-notice">&copy; 2023 falscify. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="./resources/js/main.js"></script>
 </body>

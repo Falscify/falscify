@@ -1,0 +1,370 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100;400;600&display=swap');
+
+/* Custom properties */
+:root{
+  /* Colors */
+  --light-color: #fff;
+  --light-color-alt: #afb6cd;
+  --primary-bg-color: #131417;
+  --secondary-bg-color: #252830;
+  --hover-light-color: var(--light-color);
+  --hover-dark-color: var(--primary-bg-color);
+  --transparent-light-color: rgba(255,255,255,.05);
+  --transparent-dark-color: rgba(0,0,0,.75);
+  /* Font */
+  --font-family: "Dosis", sans-serif;
+  --font-size-xs: 1.2rem;
+  --font-size-s: 1.6rem;
+  --font-size-m: 2.4rem;
+  --font-size-l: 3rem;
+  --font-size-xl: 4rem;
+  --gap: 2rem;
+  --margin-s: 2rem;
+  --margin-m: 3rem;
+  --item-min-height-s: 20rem;
+  --item-min-height-m: 30rem;
+}
+
+/* Base styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  /* font-size: 10px; */
+  font-size: 62.5%;
+}
+
+body{
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+  color: var(--light-color-alt);
+  background-color: var(--primary-bg-color);
+  letter-spacing: 1px;
+  transition: background-color .25s, color .25s;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+img{
+  max-width: 100;
+  display: inline-block;
+  margin: 10px;
+}
+
+ul{
+  list-style: none;
+}
+
+input,
+button{
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+i{
+  font-size: var(--font-size-m);
+}
+
+form{
+  border: 3px solid var(--secondary-bg-color);
+  top: 50%;
+  bottom: 50%;
+}
+
+/* Theme color change */
+body.light-theme{
+  --light-color: #3d3d3d;
+  --light-color-alt: rgba(0,0,0,.6);
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #dfdfdf;
+  --hover-light-color: #fff;
+  --transparent-light-color: #252830;
+  --transparent-dark-color: rgba(0,0,0,.1);
+}
+
+/* Reusable classes */
+.container{
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.place-items-center{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-s-hidden{
+  display: none;
+}
+
+
+/* Header */
+.header{
+  background-color: var(--secondary-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-m);
+  color: var(--light-color);
+}
+
+.menu{
+  position: absolute;
+  top: 8.5rem;
+  right: 1.5rem;
+  width: 23rem;
+  padding: 1.5rem;
+  background-color: var(--secondary-bg-color);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .25s ease-in;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.menu > .list{
+  flex-direction: column;
+}
+
+.list-link.current{
+  color: var(--light-color);
+}
+
+.close-menu-icon{
+  display: none;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.login-btn{
+  color: #131417;
+  background-color: rgb(56, 115, 198);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.register-btn{
+  color: #131417;
+  background-color: rgb(58, 179, 88);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.list-link:hover{
+  color: var(--light-color);
+}
+.btn:hover,
+.btn:hover span{
+  color: var(--light-color);
+}
+
+.moon-icon{
+  display: none;
+}
+
+.light-theme .sun-icon{
+  display: none;
+}
+
+.light-theme .moon-icon{
+  display: block;
+}
+
+.header.activated{
+  box-shadow: 0 1px .5rem var(--transparent-light-color);
+}
+
+.menu.activated{
+  box-shadow: 1px 1px 1rem var(--transparent-light-color);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon{
+  display: none;
+}
+
+.menu-toggle-icon.activated .close-menu-icon{
+  display: block;
+}
+
+
+/* Search bar */
+.search-bar-container{
+  width: 50%;
+  margin: 15rem 25% 0 25%;
+}
+
+.search-bar{
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  border-radius: 25px;
+  padding: 1.25rem;
+  margin: 1rem 0 0 0;
+}
+
+#search {
+  margin: 0 1rem 0 1rem;
+  width: 96%;
+}
+
+#search-btn {
+  margin: 0 1rem 0 1rem;
+}
+
+
+/* Submission button */
+.submission-btn-container{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 10rem 25% 0 25%;
+}
+
+.submission-btn{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 3rem 5rem 3rem 5rem;
+  border-radius: 25px;
+  color: #131417;
+  background-color: rgb(58, 179, 88);
+}
+
+.submission-btn > .ri-check-line{
+  margin-left: .5rem;
+}
+
+/* Footer */
+.footer{
+  background-color: var(--secondary-bg-color);
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer-container{
+  gap: var(--gap);
+}
+
+.company-data{
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.company-description{
+  margin-block: var(--margin-s);
+  max-width: 100%;
+}
+
+.social-media{
+  margin-bottom: var(--margin-m);
+}
+
+.copyright-notice{
+  opacity: .8;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--secondary-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #131417;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .menu{
+        position: static;
+        width: initial;
+        padding: initial;
+        background-color: transparent;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .menu > .list{
+        flex-direction: row;
+    }
+
+    .screen-l-hidden{
+        display: none;
+    }
+
+    .screen-s-hidden{
+        display: block;
+    }
+
+    .sign-up-btn{
+        padding: 4px;
+    }
+
+    .footer-container{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .company-data{
+        grid-column: span 2;
+    }
+
+    .company-description{
+        max-width: 85%;
+    }
+
+    .copyright-notice{
+        margin-top: auto;
+    }
+}
+
+
+/* WIP */
+.container.wip{
+  width: 100%;
+  margin-top: 15rem;
+}
