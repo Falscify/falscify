@@ -6,4 +6,7 @@ This might potentially invalidate some of the bullet points marked in the [check
 
 As a PR assignee **please make sure these points still hold before you ask for a revision.**
 
-Thank you! 😸
+<p align="center">
+  <img src="https://media.tenor.com/Ms06pwmECuYAAAAd/everythings-changed-everything-is-different.gif" width="500rem">
+  <br><br>
+</p>
