@@ -20,7 +20,7 @@ Currently, we as scientists face the problem that only positive research results
 
 ## Links
 
-- [Code of conduct](https://github.com/f1lem0n/falscify/blob/main/CODE_OF_CONDUCT.md)
+- [Code of Conduct](https://github.com/f1lem0n/falscify/blob/main/CODE_OF_CONDUCT.md)
 - [Changelog](https://github.com/f1lem0n/falscify/blob/main/CHANGELOG.md)
 
 ## Code owners
