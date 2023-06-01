@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,12 +46,12 @@
   <!-- Search Bar -->
   <div class="container search-bar-container">
     <h2>Let's revolutionize science, together!</h2>
-    <div class="search-bar">
-      <input type="search" id="search" placeholder="Search">
-      <button class="btn" id="search-btn">
-        <i class="ri-search-line" type="submit"></i>
-      </button>
-    </div>
+      <form action="./handlers/search.py" method="post" class="search-bar">
+        <input type="search" name="query" id="search" placeholder="Search">
+        <button class="btn" id="search-btn">
+          <i class="ri-search-line" type="submit"></i>
+        </button>
+      </form>
   </div>
 
   <!-- Report Submission Button -->
@@ -61,6 +61,43 @@
         <h2>Submit report</h2>
         <i class="ri-check-line"></i>
       </button>
+    </a>
+  </div>
+
+  <!-- Colorful section -->
+  <div class="container home-img-container">
+    <a href="tutorial.html" class="img-link">
+      <figcaption>
+        <h3>First steps.</h3>
+        <h4>Learn how to use falscify.</h4>
+      </figcaption>
+      <img
+      src="./resources/graphics/first_steps.jpg"
+      alt="First steps - falscify tutorial."
+      class="side-img"
+      >
+    </a>
+    <a href="story.html" class="img-link">
+      <figcaption>
+        <h3>Electromagnetism</h3>
+        <h4>How it started?</h4>
+      </figcaption>
+      <img
+      src="./resources/graphics/story.jpg"
+      alt="A trending scientific story."
+      class="middle-img"
+      >
+    </a>
+    <a href="problem.html" class="img-link">
+      <figcaption>
+        <h3>A hole in today's science.</h3>
+        <h4>What is wrong and how do we address the problem?</h4>
+      </figcaption>
+      <img
+      src="./resources/graphics/science_problem.jpg"
+      alt="A hole in today's science."
+      class="side-img"
+      >
     </a>
   </div>
 

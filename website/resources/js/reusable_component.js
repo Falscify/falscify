@@ -3,7 +3,7 @@ class Logo extends HTMLElement{
   connectedCallback(){
     this.innerHTML = `
       <a class="logo" href="index.html">
-        <img src="../graphics/logotype.png" height=30rem>
+        <img src="./resources/graphics/logotype.png" height=30rem>
         <h1>falscify</h1>
       </a>
     `
@@ -17,7 +17,7 @@ class TopRightList extends HTMLElement{
   connectedCallback(){
     this.innerHTML = `
       <div class="list list-right">
-        <button class="btn place-items-center" id="theme-toggle-btn">
+        <button class="btn place-items-center" id="theme-toggle-btn" aria-label="auto">
           <i class="ri-sun-line sun-icon"></i>
           <i class="ri-moon-line moon-icon"></i>
         </button>
