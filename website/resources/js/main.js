@@ -28,10 +28,10 @@ const toggleMenu = () => {
 
 menuToggleIcon.addEventListener('click', toggleMenu);
 
-// Switch theme/add to local storage
+// Switch theme/add to session storage
 const body = document.body;
 const themeToggleBtn = selectElement('#theme-toggle-btn');
-const currentTheme = localStorage.getItem('currentTheme');
+const currentTheme = sessionStorage.getItem('currentTheme');
 
 // Check to see if there is a theme preference in local Storage, if so add the light theme to the body
 if(currentTheme) {
@@ -44,8 +44,8 @@ themeToggleBtn.addEventListener('click', function () {
 
     // If the body has the class of light theme then add it to local Storage, if not remove it
     if (body.classList.contains('light-theme')) {
-        localStorage.setItem('currentTheme', 'themeActive');
+        sessionStorage.setItem('currentTheme', 'themeActive');
     }else{
-        localStorage.removeItem('currentTheme');
+        sessionStorage.removeItem('currentTheme');
     }
 });
