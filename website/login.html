@@ -16,11 +16,7 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <nav class="navbar container">
-      <a class="logo" href="index.html">
-        <img src="../graphics/logotype.png" height=30rem>
-        <h1>falscify</h1>
-      </a>
-
+      <app-logo></app-logo>
       <div class="menu" id="menu">
         <ul class="list">
           <li class="list-item">
@@ -44,6 +40,7 @@
         </ul>
       </div>
 
+      <!-- Top right list but with register button only -->
       <div class="list list-right">
         <button class="btn place-items-center" id="theme-toggle-btn">
           <i class="ri-sun-line sun-icon"></i>
@@ -55,9 +52,6 @@
           <i class="ri-close-line close-menu-icon"></i>
         </button>
 
-        <button type="button" class="btn login-btn screen-s-hidden">
-          <a href="login.html">Sign in</a>
-        </button>
         <button class="btn register-btn screen-s-hidden">
           <a href="register.html">Sign up</a>
         </button>
@@ -66,38 +60,35 @@
   </header>
 
   <!-- Login form -->
-  <div class="container wip">Currently working on it...</div>
+  <div class="form-container">
+    <h2>Sign in</h2>
+    <form class="login-form" action="./handlers/login.php">
+      <input type="email" name="email" id="email" placeholder="E-mail">
+      <input type="password" name="password" id="password" placeholder="Password">
+      <button type="submit" class="btn login-btn">Sign in</button>
+    </form>
+
+    <div>
+      Forgot password?
+      <a class="text-link" href="#">
+        Send recovery e-mail.
+      </a>
+    </div>
+
+    <br>
+
+    <div>
+      Don't have an account?
+      <a class="text-link" href="register.html">
+        Sign up.
+      </a>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="footer section">
-    <div class="footer-container container d-grid">
-      <div class="company-data">
-        <p class="company-description">
-          Falscify is a P2P-driven, innovative database containing
-          statistically insignificant results of scientific research
-          from accross many different fields of science.
-        </p>
+  <app-footer></app-footer>
 
-        <ul class="list social-media">
-          <li class="list-item">
-            <a href="#" class="list-link">
-              <i class="ri-linkedin-line"></i>
-            </a>
-
-            <a href="#" class="list-link">
-              <i class="ri-twitter-line"></i>
-            </a>
-
-            <a href="#" class="list-link">
-              <i class="ri-instagram-line"></i>
-            </a>
-          </li>
-        </ul>
-        <span class="copyright-notice">&copy; 2023 falscify. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Custom Script -->
+  <!-- JS Scripts -->
+  <script src="./resources/js/reusable_component.js"></script>
   <script src="./resources/js/main.js"></script>
 </body>

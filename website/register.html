@@ -16,10 +16,7 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <nav class="navbar container">
-      <a class="logo" href="index.html">
-        <img src="../graphics/logotype.png" height=30rem>
-        <h1>falscify</h1>
-      </a>
+      <app-logo></app-logo>
 
       <div class="menu" id="menu">
         <ul class="list">
@@ -44,6 +41,7 @@
         </ul>
       </div>
 
+      <!-- Top right list but with login button only -->
       <div class="list list-right">
         <button class="btn place-items-center" id="theme-toggle-btn">
           <i class="ri-sun-line sun-icon"></i>
@@ -58,46 +56,34 @@
         <button type="button" class="btn login-btn screen-s-hidden">
           <a href="login.html">Sign in</a>
         </button>
-        <button class="btn register-btn screen-s-hidden">
-          <a href="register.html">Sign up</a>
-        </button>
       </div>
     </nav>
   </header>
 
   <!-- Register form -->
-  <div class="container wip">Currently working on it...</div>
+  <div class="form-container">
+    <h2>Sign up</h2>
+    <form class="register-form" action="./handlers/register.php">
+      <input type="text" name="first_name" id="first_name" placeholder="First Name">
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+      <input type="email" name="email" id="email" placeholder="E-mail">
+      <input type="password" name="password" id="password" placeholder="Password">
+      <input type="password" name="repeat_password" id="repeat_password" placeholder="Repeat password">
+      <button type="submit" class="btn register-btn">Sign up</button>
+    </form>
+
+    <div>
+      Already have an account?
+      <a class="text-link" href="login.html">
+        Sign in.
+      </a>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="footer section">
-    <div class="footer-container container d-grid">
-      <div class="company-data">
-        <p class="company-description">
-          Falscify is a P2P-driven, innovative database containing
-          statistically insignificant results of scientific research
-          from accross many different fields of science.
-        </p>
+  <app-footer></app-footer>
 
-        <ul class="list social-media">
-          <li class="list-item">
-            <a href="#" class="list-link">
-              <i class="ri-linkedin-line"></i>
-            </a>
-
-            <a href="#" class="list-link">
-              <i class="ri-twitter-line"></i>
-            </a>
-
-            <a href="#" class="list-link">
-              <i class="ri-instagram-line"></i>
-            </a>
-          </li>
-        </ul>
-        <span class="copyright-notice">&copy; 2023 falscify. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Custom Script -->
+  <!-- JS Scripts -->
+  <script src="./resources/js/reusable_component.js"></script>
   <script src="./resources/js/main.js"></script>
 </body>
