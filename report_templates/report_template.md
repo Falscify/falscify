@@ -1,5 +1,3 @@
-# Report Submission
-
 ### Abstract
 
 [Provide a brief summary of your report.]
