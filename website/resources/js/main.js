@@ -49,3 +49,4 @@ themeToggleBtn.addEventListener('click', function () {
     sessionStorage.removeItem('currentTheme');
   }
 });
+

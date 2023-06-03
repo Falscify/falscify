@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>falscify | Home</title>
+  <title>falscify | Sign up</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="../graphics/logotype.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -21,7 +21,7 @@
       <div class="menu" id="menu">
         <ul class="list">
           <li class="list-item">
-            <a href="index.html" class="list-link">Home</a>
+            <a href="home.html" class="list-link">Home</a>
           </li>
           <li class="list-item">
             <a href="recent.html" class="list-link">Recent</a>
@@ -30,7 +30,7 @@
             <a href="explore.html" class="list-link">Explore</a>
           </li>
           <li class="list-item">
-            <a href="about.html" class="list-link">About</a>
+            <a href="about.html" class="list-link">About Us</a>
           </li>
           <li class="list-item screen-l-hidden">
             <a href="login.html" class="list-link">Sign in</a>
@@ -63,12 +63,35 @@
   <!-- Register form -->
   <div class="form-container">
     <h2>Sign up</h2>
+    <div id="orcidWidget" data-size='sm' data-clientid='APP-0Z4QDI4NXFHH49QC' data-env='production'
+      data-scopes='/read-limited%20/activities/update%20/person/update' data-redirecturi='./handlers/login.py'
+      data-submituri='https://orcid.org/oauth/authorize?client_id=APP-0Z4QDI4NXFHH49QC&response_type=code&scope=/authenticate&redirect_uri=https://falscify.pl'>
+    </div>
     <form class="register-form" action="./handlers/register.php">
-      <input type="text" name="first_name" id="first_name" placeholder="First Name">
-      <input type="text" name="last_name" id="last_name" placeholder="Last Name">
-      <input type="email" name="email" id="email" placeholder="E-mail">
-      <input type="password" name="password" id="password" placeholder="Password">
-      <input type="password" name="repeat_password" id="repeat_password" placeholder="Repeat password">
+      <label hidden>First Name</label>
+      <input required type="text" name="first_name" id="first_name" placeholder="First Name">
+      <label hidden>Last Name</label>
+      <input required type="text" name="last_name" id="last_name" placeholder="Last Name">
+
+      <label hidden>Institution</label>
+      <select required name="institution" class="form-list">
+        <option disabled selected>Choose institution</option>
+        <option>Unassociated</option>
+        <option>Jagiellonian University</option>
+      </select>
+
+      <label hidden>E-mail</label>
+      <input required type="email" name="email" id="email" placeholder="E-mail">
+      <label hidden>Password</label>
+      <input required type="password" name="password" id="password" placeholder="Password">
+      <label hidden>Repeat Password</label>
+      <input required type="password" name="repeat_password" id="repeat_password" placeholder="Repeat password">
+      <fieldset>
+        <input required id="accept-terms" type="checkbox">
+          <label for="accept-terms">I have read and accept the <a target="_blank" href="terms.html" class="text-link">Terms of Use.</a>
+        </label>
+      </fieldset>
+
       <button type="submit" class="btn register-btn">Sign up</button>
     </form>
 
@@ -83,7 +106,8 @@
   <!-- Footer -->
   <app-footer></app-footer>
 
-  <!-- JS Scripts -->
+  <!-- Local JS Scripts -->
+  <script src="./resources/js/orcid-widget.js"></script>
   <script src="./resources/js/reusable_component.js"></script>
   <script src="./resources/js/main.js"></script>
 </body>

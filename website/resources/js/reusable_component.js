@@ -2,7 +2,7 @@
 class Logo extends HTMLElement{
   connectedCallback(){
     this.innerHTML = `
-      <a class="logo" href="index.html">
+      <a class="logo" href="home.html">
         <img src="./resources/graphics/logotype.png" height=30rem>
         <h1>falscify</h1>
       </a>

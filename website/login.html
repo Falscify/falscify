@@ -20,7 +20,7 @@
       <div class="menu" id="menu">
         <ul class="list">
           <li class="list-item">
-            <a href="index.html" class="list-link">Home</a>
+            <a href="home.html" class="list-link">Home</a>
           </li>
           <li class="list-item">
             <a href="recent.html" class="list-link">Recent</a>
@@ -29,7 +29,7 @@
             <a href="explore.html" class="list-link">Explore</a>
           </li>
           <li class="list-item">
-            <a href="about.html" class="list-link">About</a>
+            <a href="about.html" class="list-link">About Us</a>
           </li>
           <li class="list-item screen-l-hidden">
             <a href="login.html" class="list-link current">Sign in</a>
@@ -62,6 +62,10 @@
   <!-- Login form -->
   <div class="form-container">
     <h2>Sign in</h2>
+    <div id="orcidWidget" data-size='sm' data-clientid='APP-0Z4QDI4NXFHH49QC' data-env='production'
+      data-scopes='/read-limited%20/activities/update%20/person/update' data-redirecturi='./handlers/login.py'
+      data-submituri='https://orcid.org/oauth/authorize?client_id=APP-0Z4QDI4NXFHH49QC&response_type=code&scope=/authenticate&redirect_uri=https://falscify.pl'>
+    </div>
     <form class="login-form" action="./handlers/login.php">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="password" id="password" placeholder="Password">
@@ -90,5 +94,6 @@
 
   <!-- JS Scripts -->
   <script src="./resources/js/reusable_component.js"></script>
+  <script src="./resources/js/orcid-widget.js"></script>
   <script src="./resources/js/main.js"></script>
 </body>
