@@ -92,16 +92,37 @@ button {
   font-size: var(--font-size-m);
 }
 
+.orcid-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orcid-btn{
+  background-color: var(--primary-bg-color);
+  border-radius: 25px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.orcid-logo{
+  margin: 2px;
+  width: 8rem;
+}
+
 /* Theme color change */
 body.light-theme {
-  --light-color: #3d3d3d;
+  --light-color: var(--btn-text-color);
   --light-color-alt: rgba(0, 0, 0, 0.6);
   --primary-bg-color: #fff;
   --secondary-bg-color: #dfdfdf;
   --hover-light-color: #fff;
-  --transparent-light-color: #252830;
+  --transparent-light-color: var(--btn-text-color);
   --transparent-dark-color: rgba(0, 0, 0, .4);
   --text-link-color: blue;
+  color: var(--btn-text-color);
 }
 
 /* Reusable classes */
@@ -311,13 +332,10 @@ body.light-theme {
   margin-left: .5rem;
 }
 
-/* Footer */
 .footer {
   background-color: var(--secondary-bg-color);
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   padding-bottom: 1.5rem;
 }
@@ -348,7 +366,6 @@ body.light-theme {
 form {
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--secondary-bg-color);
   margin: 1rem;
   align-items: center;
 }
@@ -358,7 +375,7 @@ form > input {
   font: var(--font-family);
   border: none;
   color: inherit;
-  width: 80%;
+  width: 70%;
   margin: 0.5rem;
   background-color: var(--primary-bg-color);
   border-radius: 25px;
@@ -500,7 +517,7 @@ form>.register-btn {
   margin: 0 12.5% 20rem;
 }
 
-#orcidAuthButton:hover,
+.orcid-btn:hover,
 .login-btn:hover,
 .register-btn:hover,
 .submission-btn:hover,
@@ -577,6 +594,13 @@ figcaption {
   .copyright-notice {
     margin-top: auto;
   }
+}
+
+.form-label {
+  font-size: var(--font-size-s);
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: 15%;
 }
 
 

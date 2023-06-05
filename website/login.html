@@ -62,13 +62,13 @@
   <!-- Login form -->
   <div class="form-container">
     <h2>Sign in</h2>
-    <div id="orcidWidget" data-size='sm' data-clientid='APP-0Z4QDI4NXFHH49QC' data-env='production'
-      data-scopes='/read-limited%20/activities/update%20/person/update' data-redirecturi='./handlers/login.py'
-      data-submituri='https://orcid.org/oauth/authorize?client_id=APP-0Z4QDI4NXFHH49QC&response_type=code&scope=/authenticate&redirect_uri=https://falscify.pl'>
-    </div>
-    <form class="login-form" action="./handlers/login.php">
-      <input type="email" name="email" id="email" placeholder="E-mail">
-      <input type="password" name="password" id="password" placeholder="Password">
+    <app-orcid-btn></app-orcid-btn>
+    <form action="./handlers/authenticate.php" method="post">
+      <label hidden>E-mail</label>
+      <input required type="email" name="email" id="email" placeholder="E-mail">
+      <label hidden>Password</label>
+      <input required type="password" name="password" id="password" placeholder="Password">
+      <label hidden>Sign in</label>
       <button type="submit" class="btn login-btn">Sign in</button>
     </form>
 
