@@ -1,6 +1,9 @@
-[![](https://img.shields.io/badge/-Join_our_Discord_channel!-%237289d9)](https://discord.gg/KNN8nPeW)
-![](https://img.shields.io/badge/Technology-HTML5_|_PHP-9d3de0.svg)
-[![](https://img.shields.io/badge/Release-v0.1.0_alpha-519dd9.svg)](https://github.com/Falscify/falscify/releases)
+[![Discord](https://img.shields.io/discord/1115290241180381197?color=7289da&label=Discord&logo=discord&logoColor=ffffff)](https://discord.gg/KNN8nPeW)
+![Technologies](https://img.shields.io/badge/Technology-HTML5_|_PHP-9d3de0.svg)
+[![Release](https://img.shields.io/badge/Release-v0.1.0_alpha-519dd9.svg)](https://github.com/Falscify/falscify/releases)
+![GitHub issues](https://img.shields.io/github/issues/Falscify/falscify)
+![GitHub stars](https://img.shields.io/github/stars/Falscify/falscify)
+![GitHub forks](https://img.shields.io/github/forks/Falscify/falscify)
 
 ![Project Logo](graphics/inline_gh.png)
 
