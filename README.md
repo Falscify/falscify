@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/-Join_our_Discord_server!-%237289d9)](https://discord.gg/KNN8nPeW)
+[![](https://img.shields.io/badge/-Join_our_Discord_channel!-%237289d9)](https://discord.gg/KNN8nPeW)
 ![](https://img.shields.io/badge/License-None-000000.svg)
 [![](https://img.shields.io/badge/Release-v0.1.0_alpha-519dd9.svg)](https://github.com/Falscify/falscify/releases)
 
