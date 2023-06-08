@@ -26,5 +26,4 @@ Currently, we as scientists face the problem that only positive research results
 - [Changelog](https://github.com/f1lem0n/falscify/blob/main/CHANGELOG.md)
 
 ## Code owners
-- [f1lem0n](https://github.com/f1lem0n)
-- [konsternacja](https://github.com/konsternacja)
+[f1lem0n](https://github.com/f1lem0n) • [konsternacja](https://github.com/konsternacja)
