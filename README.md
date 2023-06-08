@@ -2,7 +2,6 @@
 ![](https://img.shields.io/badge/Technology-HTML5_|_PHP-9d3de0.svg)
 [![](https://img.shields.io/badge/Release-v0.1.0_alpha-519dd9.svg)](https://github.com/Falscify/falscify/releases)
 
-
 ![Project Logo](graphics/inline_gh.png)
 
 **Falscify** is a P2P-driven, innovative database containing statistically insignificant results of scientific research in many different fields of science.
