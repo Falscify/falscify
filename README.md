@@ -1,5 +1,7 @@
+[![](https://img.shields.io/badge/-Discord-%237289d9)](https://discord.gg/KNN8nPeW)
 ![](https://img.shields.io/badge/license-None-000000.svg)
 ![](https://img.shields.io/badge/github-v0.1.0_alpha-519dd9.svg)
+
 
 ![Project Logo](graphics/inline_gh.png)
 
