@@ -7,7 +7,7 @@
 
 ![Project Logo](graphics/inline_gh.png)
 
-**Falscify** is a P2P-driven, innovative database containing statistically insignificant results of scientific research in many different fields of science.
+**Falscify** is a P2P-driven, innovative database containing statistically insignificant results of scientific research from across many different fields of science.
 
 ## Table of Contents
 - [General info](#general-info)
