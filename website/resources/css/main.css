@@ -134,7 +134,7 @@ body.light-theme {
 .paragraph {
   margin: 2rem 0;
 }
-
+idfppooter-
 .body-text-container > h2 {
   margin-top: 6rem;
 }
@@ -164,6 +164,11 @@ body.light-theme {
 }
 
 
+.list-right {
+  display: flex;
+  justify-content: right;
+  width: 10%;
+}
 /* Header */
 .header {
   background-color: var(--secondary-bg-color);
@@ -188,6 +193,7 @@ body.light-theme {
   font-size: var(--font-size-m);
   color: var(--light-color);
   font-weight: 100;
+  width: 10%;
 }
 
 .menu {
@@ -231,6 +237,36 @@ body.light-theme {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 25px;
   font-weight: bold;
+}
+
+.logout-btn {
+  color: var(--btn-text-color);
+  background-color: var(--red-btn-color);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.message-container {
+  display: flex;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  max-width: 70%;
+}
+
+.error-container {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: red;
+}
+.success-container {
+  color: green;
+  background-color: rgba(0, 255, 0, 0.1);
+  border-color: green;
 }
 
 .register-btn {
@@ -332,15 +368,20 @@ body.light-theme {
   margin-left: .5rem;
 }
 
+/* Footer */
 .footer {
   background-color: var(--secondary-bg-color);
-  position: fixed;
-  bottom: 0;
+  margin-bottom: 0;
   width: 100%;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem;
 }
 
-.footer-container {
+.page-contents {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer-container {
   gap: var(--gap);
 }
 
@@ -393,6 +434,12 @@ fieldset {
   border: none;
 }
 
+form > label {
+  font-size: var(--font-size-s);
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: 15%;
+}
 
 form>.login-btn {
   margin: 1rem;
@@ -410,8 +457,7 @@ form>.register-btn {
 .form-container {
   background-color: var(--secondary-bg-color);
   align-items: center;
-  margin-top: 20rem;
-  margin-left: 35%;
+  margin: 20rem auto;
   padding: 3rem;
   width: 30%;
   border-radius: 25px;
@@ -434,6 +480,10 @@ form>.register-btn {
   cursor: pointer;
   color: var(--light-color);
   text-decoration: none;
+}
+
+.content-wrap {
+  min-height: 100vh;
 }
 
 #orcidWidget.small{
@@ -565,6 +615,7 @@ figcaption {
 
   .menu>.list {
     flex-direction: row;
+    border: 0 auto;
   }
 
   .screen-l-hidden {
@@ -594,13 +645,6 @@ figcaption {
   .copyright-notice {
     margin-top: auto;
   }
-}
-
-.form-label {
-  font-size: var(--font-size-s);
-  margin-top: 1rem;
-  margin-right: auto;
-  margin-left: 15%;
 }
 
 
