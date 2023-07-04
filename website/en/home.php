@@ -26,7 +26,7 @@ if ($_COOKIE['logged_in']) {
 
   <link rel="icon" type="image/png" sizes="32x32" href="../resources/graphics/logotype.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="../resources/css/main.css"> -->
+  <link rel="stylesheet" href="../resources/css/main.css">
 </head>
 
 <body>
@@ -95,9 +95,9 @@ if ($_COOKIE['logged_in']) {
         </nav>
       </header>
 
-      <?php if ($_COOKIE['registered']) { ?>
+      <?php if (isset($_COOKIE['registered'])) { if ($_COOKIE['registered']) { ?>
         <div class="message-container success-container">Success! Check your inbox for our confirmation email.</div>
-      <?php } ?>
+      <?php }} ?>
 
       <!-- SEARCH BAR -->
       <?php include('html/search_bar.html'); ?>
