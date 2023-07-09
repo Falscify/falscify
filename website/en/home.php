@@ -24,9 +24,9 @@ if ($_COOKIE['logged_in']) {
 
   <title>falscify | Home</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../resources/graphics/logotype.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/graphics/logotype.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="../resources/css/main.css">
+  <link rel="stylesheet" href="/resources/css/main.css">
 </head>
 
 <body>
@@ -35,34 +35,34 @@ if ($_COOKIE['logged_in']) {
     <div class="content-wrap">
       <header class="header" id="header">
         <nav class="navbar container">
-          <?php include('html/logo.html'); ?>
+          <?php include('/en/html/logo.html'); ?>
           <div class="menu" id="menu">
             <ul class="list">
               <li class="list-item">
-                <a href="home.php" class="list-link current">Home</a>
+                <a href="/en/home.php" class="list-link current">Home</a>
               </li>
               <li class="list-item">
-                <a href="recent.php" class="list-link">Recent</a>
+                <a href="/en/recent.php" class="list-link">Recent</a>
               </li>
               <li class="list-item">
-                <a href="explore.php" class="list-link">Explore</a>
+                <a href="/en/explore.php" class="list-link">Explore</a>
               </li>
               <li class="list-item">
-                <a href="about.php" class="list-link">About Us</a>
+                <a href="/en/about.php" class="list-link">About Us</a>
               </li>
               <?php if ($_COOKIE['logged_in']) { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="account.php" class="list-link">Account</a>
+                  <a href="/en/account.php" class="list-link">Account</a>
                 </li>
                 <li class="list-item screen-l-hidden">
-                  <a href="logout.php" class="list-link">Sign out</a>
+                  <a href="/en/logout.php" class="list-link">Sign out</a>
                 </li>
               <?php } else { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="login.php" class="list-link">Sign in</a>
+                  <a href="/en/login.php" class="list-link">Sign in</a>
                 </li>
                 <li class="list-item screen-l-hidden">
-                  <a href="register.php" class="list-link">Sign up</a>
+                  <a href="/en/register.php" class="list-link">Sign up</a>
                 </li>
               <?php } ?>
             </ul>
@@ -78,17 +78,17 @@ if ($_COOKIE['logged_in']) {
             </button>
             <?php if ($_COOKIE['logged_in']) { ?>
               <button type="button" class="btn login-btn screen-s-hidden">
-                <a href="account.php">Account</a>
+                <a href="/en/account.php">Account</a>
               </button>
               <button type="button" class="btn logout-btn screen-s-hidden">
-                <a href="logout.php">Sign out</a>
+                <a href="/en/logout.php">Sign out</a>
               </button>
             <?php } else { ?>
               <button class="btn register-btn screen-s-hidden">
-                <a href="register.php">Sign up</a>
+                <a href="/en/register.php">Sign up</a>
               </button>
               <button type="button" class="btn login-btn screen-s-hidden">
-                <a href="login.php">Sign in</a>
+                <a href="/en/login.php">Sign in</a>
               </button>
             <?php } ?>
           </div>
@@ -100,20 +100,20 @@ if ($_COOKIE['logged_in']) {
       <?php }} ?>
 
       <!-- SEARCH BAR -->
-      <?php include('html/search_bar.html'); ?>
+      <?php include('/en/html/search_bar.html'); ?>
 
       <!-- REPORT SUBMISSION BUTTON -->
-      <?php include('html/report_submit_btn.html'); ?>
+      <?php include('/en/html/report_submit_btn.html'); ?>
 
       <!-- INTERACTIVE PICTURE SECTION -->
-      <?php include('html/home_img.html') ?>
+      <?php include('/en/html/home_img.html') ?>
     </div>
 
     <!-- Footer -->
-    <?php include('html/footer.html'); ?>
+    <?php include('/en/html/footer.html'); ?>
   </div>
 
   <!-- JS SCRIPTS -->
-  <script src="../resources/js/main.js"></script>
+  <script src="/resources/js/main.js"></script>
 </body>
 </html>

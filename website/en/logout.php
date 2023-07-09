@@ -1,7 +1,7 @@
 <?php
 // Only logged in users can log out
 if (!$_COOKIE['logged_in']) {
-  header('Location: home.php');
+  header('Location: /en/home.php');
   exit;
 }
 
@@ -20,6 +20,6 @@ if (ini_get("session.use_cookies")) {
 }
 
 session_destroy();
-header('Location: home.php');
+header('Location: /en/home.php');
 exit();
 ?>
