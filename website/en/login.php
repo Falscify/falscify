@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../svn_repo/config.php';
+require '/secrets/config.php';
 // Set logged_in to 0 on session start and reload the page
 // to avoid any warnings popping up on the page
 if (!isset($_COOKIE['logged_in'])) {

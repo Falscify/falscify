@@ -1,5 +1,5 @@
 <?php
-require '../../svn_repo/config.php';
+require '/secrets/config.php';
 // TODO User activation
 // If email and secret_token are not in variables
 // passed through GET, redirect to home page
