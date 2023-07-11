@@ -1,10 +1,10 @@
 <?php
-require '../../svn_repo/config.php';
+require '/secrets/config.php';
 // TODO User activation
 // If email and secret_token are not in variables
 // passed through GET, redirect to home page
 if (!isset($_GET['email'], $_GET['secret_token'])) {
-  header('Location: home.php');
+  header('Location: /en/home.php');
   exit;
 }
 
@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
   <?php
   echo mysqli_connect_errno();
   ?>
-    <a href="home.php">Return to home page.</a>
+    <a href="/en/home.php">Return to home page.</a>
   <?php
   exit;
 }
@@ -34,7 +34,7 @@ if ($stmt = $con->prepare($sql_check_query)) {
   if ($stmt->num_rows() === 0) {
     ?>
       Error: user with this e-mail doesn't exist!
-      <a href="home.php">Return to home page.</a>
+      <a href="/en/home.php">Return to home page.</a>
     <?php
     exit;
   }
@@ -47,7 +47,7 @@ if ($stmt = $con->prepare($sql_check_query)) {
   if ($active) {
     ?>
       Error: this account is already active!
-      <a href="home.php">Return to home page.</a>
+      <a href="/en/home.php">Return to home page.</a>
     <?php
     exit;
   }
@@ -56,7 +56,7 @@ if ($stmt = $con->prepare($sql_check_query)) {
   if ($_GET['secret_token'] !== $secret_token) {
     ?>
     Error: Incorrect secret token!
-    <a href="home.php">Return to home page.</a>
+    <a href="/en/home.php">Return to home page.</a>
     <?php
     exit;
   }
@@ -66,7 +66,7 @@ if ($stmt = $con->prepare($sql_check_query)) {
   <?php
   echo mysqli_connect_errno();
   ?>
-    <a href="home.php">Return to home page.</a>
+    <a href="/en/home.php">Return to home page.</a>
   <?php
   exit;
 }
@@ -83,6 +83,6 @@ if ($stmt = $con->prepare($sql_update_query)) {
   $stmt->execute();
 }
 $stmt->close();
-header('Location: home.php');
+header('Location: /en/home.php');
 exit;
 ?>

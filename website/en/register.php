@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../svn_repo/config.php';
+require '/secrets/config.php';
 // Set logged_in to 0 on session start and reload the page
 // to avoid any warnings popping up on the page
 if (!isset($_COOKIE['logged_in'])) {
@@ -10,7 +10,7 @@ if (!isset($_COOKIE['logged_in'])) {
 }
 if ($_COOKIE['logged_in']) {
   setcookie('logged_in', 1,  time() + 60 * 60);
-  header('Location: home.php');
+  header('Location: /en/home.php');
   exit;
 }
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -46,9 +46,9 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
 
   <title>falscify | Sign up</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../resources/graphics/logotype.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/graphics/logotype.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="../resources/css/main.css">
+  <link rel="stylesheet" href="/resources/css/main.css">
 </head>
 
 <body>
@@ -57,31 +57,31 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
     <div class="content-wrap">
       <header class="header" id="header">
         <nav class="navbar container">
-          <?php include('html/logo.html'); ?>
+          <?php include('/en/html/logo.html'); ?>
           <div class="menu" id="menu">
             <ul class="list">
               <li class="list-item">
-                <a href="home.php" class="list-link">Home</a>
+                <a href="/en/home.php" class="list-link">Home</a>
               </li>
               <li class="list-item">
-                <a href="recent.php" class="list-link">Recent</a>
+                <a href="/en/recent.php" class="list-link">Recent</a>
               </li>
               <li class="list-item">
-                <a href="explore.php" class="list-link">Explore</a>
+                <a href="/en/explore.php" class="list-link">Explore</a>
               </li>
               <li class="list-item">
-                <a href="about.php" class="list-link">About Us</a>
+                <a href="/en/about.php" class="list-link">About Us</a>
               </li>
               <?php if ($_COOKIE['logged_in']) { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="account.php" class="list-link">Account</a>
+                  <a href="/en/account.php" class="list-link">Account</a>
                 </li>
                 <li class="list-item screen-l-hidden">
-                  <a href="logout.php" class="list-link">Sign out</a>
+                  <a href="/en/logout.php" class="list-link">Sign out</a>
                 </li>
               <?php } else { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="login.php" class="list-link">Sign in</a>
+                  <a href="/en/login.php" class="list-link">Sign in</a>
                 </li>
               <?php } ?>
             </ul>
@@ -97,14 +97,14 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
             </button>
             <?php if ($_COOKIE['logged_in']) { ?>
               <button type="button" class="btn login-btn screen-s-hidden">
-                <a href="account.php">Account</a>
+                <a href="/en/account.php">Account</a>
               </button>
               <button type="button" class="btn logout-btn screen-s-hidden">
-                <a href="logout.php">Sign out</a>
+                <a href="/en/logout.php">Sign out</a>
               </button>
             <?php } else { ?>
               <button type="button" class="btn login-btn screen-s-hidden">
-                <a href="login.php">Sign in</a>
+                <a href="/en/login.php">Sign in</a>
               </button>
             <?php } ?>
           </div>
@@ -119,7 +119,7 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
         <?php
         // TODO Remove echo calls and change JS redirect to header()
 
-        include('html/orcid_button.html');
+        include('/en/html/orcid_button.html');
         // Upon clicking sumbit button
         if (isset($_POST['submit'])) {
           $error = FALSE;
@@ -214,7 +214,7 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
               // }
               // Redirect after successful registration
               setcookie('registered', 1, time() + 30);
-              header('Location: home.php');
+              header('Location: /en/home.php');
               exit;
             } else {
               ?>
@@ -269,17 +269,17 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
 
         <div>
           Already have an account?
-          <a class="text-link" href="login.php">
+          <a class="text-link" href="/en/login.php">
             Sign in.
           </a>
         </div>
       </div>
     </div>
     <!-- FOOTER -->
-    <?php include('html/footer.html'); ?>
+    <?php include('/en/html/footer.html'); ?>
   </div>
 
   <!-- JS SCRIPTS -->
-  <script src="../resources/js/main.js"></script>
+  <script src="/resources/js/main.js"></script>
 </body>
 </html>

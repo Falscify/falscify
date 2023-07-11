@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../svn_repo/config.php';
+require '/secrets/config.php';
 // Set logged_in to 0 on session start and reload the page
 // to avoid any warnings popping up on the page
 if (!isset($_COOKIE['logged_in'])) {
@@ -10,7 +10,7 @@ if (!isset($_COOKIE['logged_in'])) {
 }
 if ($_COOKIE['logged_in']) {
   setcookie('logged_in', 1,  time() + 60 * 60);
-  header('Location: home.php');
+  header('Location: /en/home.php');
   exit;
 }
 ?>
@@ -25,9 +25,9 @@ if ($_COOKIE['logged_in']) {
 
   <title>falscify | Sign in</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../resources/graphics/logotype.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/graphics/logotype.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="../resources/css/main.css">
+  <link rel="stylesheet" href="/resources/css/main.css">
 </head>
 
 <body>
@@ -36,31 +36,31 @@ if ($_COOKIE['logged_in']) {
       <!-- HEADER -->
       <header class="header" id="header">
         <nav class="navbar container">
-          <?php include('html/logo.html'); ?>
+          <?php include('/en/html/logo.html'); ?>
           <div class="menu" id="menu">
             <ul class="list">
               <li class="list-item">
-                <a href="home.php" class="list-link">Home</a>
+                <a href="/en/home.php" class="list-link">Home</a>
               </li>
               <li class="list-item">
-                <a href="recent.php" class="list-link">Recent</a>
+                <a href="/en/recent.php" class="list-link">Recent</a>
               </li>
               <li class="list-item">
-                <a href="explore.php" class="list-link">Explore</a>
+                <a href="/en/explore.php" class="list-link">Explore</a>
               </li>
               <li class="list-item">
-                <a href="about.php" class="list-link">About Us</a>
+                <a href="/en/about.php" class="list-link">About Us</a>
               </li>
               <?php if ($_COOKIE['logged_in']) { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="account.php" class="list-link">Account</a>
+                  <a href="/en/account.php" class="list-link">Account</a>
                 </li>
                 <li class="list-item screen-l-hidden">
-                  <a href="logout.php" class="list-link">Sign out</a>
+                  <a href="/en/logout.php" class="list-link">Sign out</a>
                 </li>
               <?php } else { ?>
                 <li class="list-item screen-l-hidden">
-                  <a href="register.php" class="list-link">Sign up</a>
+                  <a href="/en/register.php" class="list-link">Sign up</a>
                 </li>
               <?php } ?>
             </ul>
@@ -76,14 +76,14 @@ if ($_COOKIE['logged_in']) {
             </button>
             <?php if ($_COOKIE['logged_in']) { ?>
               <button type="button" class="btn login-btn screen-s-hidden">
-                <a href="account.php">Account</a>
+                <a href="/en/account.php">Account</a>
               </button>
               <button type="button" class="btn logout-btn screen-s-hidden">
-                <a href="logout.php">Sign out</a>
+                <a href="/en/logout.php">Sign out</a>
               </button>
             <?php } else { ?>
               <button class="btn register-btn screen-s-hidden">
-                <a href="register.php">Sign up</a>
+                <a href="/en/register.php">Sign up</a>
               </button>
             <?php } ?>
           </div>
@@ -94,7 +94,7 @@ if ($_COOKIE['logged_in']) {
       <div class="form-container">
         <h2>Sign in</h2>
         <?php
-        include('html/orcid_button.html');
+        include('/en/html/orcid_button.html');
         if (isset($_POST['submit'])) {
           $error = FALSE;
           $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -155,7 +155,7 @@ if ($_COOKIE['logged_in']) {
             if ($orcid_id !== NULL) {
               $_SESSION['orcid_id'] = $orcid_id;
             }
-            header('Location: home.php');
+            header('Location: /en/home.php');
             exit();
           }
         }
@@ -181,7 +181,7 @@ if ($_COOKIE['logged_in']) {
 
         <div>
           Don't have an account?
-          <a class="text-link" href="register.php">
+          <a class="text-link" href="/en/register.php">
             Sign up.
           </a>
         </div>
@@ -189,9 +189,9 @@ if ($_COOKIE['logged_in']) {
     </div>
 
     <!-- FOOTER -->
-    <?php include('html/footer.html'); ?>
+    <?php include('/en/html/footer.html'); ?>
   </div>
 
   <!-- JS SCRIPTS -->
-  <script src="../resources/js/main.js"></script>
+  <script src="/resources/js/main.js"></script>
 </body>
