@@ -117,7 +117,7 @@ if ($_COOKIE['logged_in']) {
             $stmt->store_result();
             if ($stmt->num_rows() === 0) {
               ?>
-              <div class="message-container error-container">User with this e-mail doesn\'t exists!</div>
+              <div class="message-container error-container">User with this e-mail doesn't exist!</div>
               <?php
               $error = TRUE;
             } else {
