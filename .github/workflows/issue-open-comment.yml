@@ -24,7 +24,7 @@ jobs:
       - name: Create a bot comment
         uses: peter-evans/create-or-update-comment@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
           repository: Falscify/falscify-web-app
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.render_template.outputs.result }}
