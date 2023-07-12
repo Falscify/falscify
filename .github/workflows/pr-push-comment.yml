@@ -20,7 +20,7 @@ jobs:
           echo "$GITHUB_PR_NUMBER"
           pr_number=$GITHUB_PR_NUMBER
           url="https://api.github.com/repos/Falscify/falscify-web-app/pulls/"${pr_number}
-          response=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" $url)
+          response=$(curl -s -H "Authorization: token ${{ secrets.FALSCIFY_BOT_TOKEN }}" $url)
           assignee=$(echo "${response}" | jq -r '.assignee.login')
           head_branch=$(echo "${response}" | jq -r '.head.ref')
           echo "assignee=${assignee}" >> $GITHUB_ENV
