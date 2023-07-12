@@ -1,0 +1,46 @@
+name: pr-comment
+
+on:
+  pull_request_target:
+    types: [synchronize]
+
+env:
+  GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+
+jobs:
+  pr-comment:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout the codebase
+        uses: actions/checkout@v2
+
+      - name: Extract PR assignee and branch name
+        run: |
+          echo "$GITHUB_PR_NUMBER"
+          pr_number=$GITHUB_PR_NUMBER
+          url="https://api.github.com/repos/Falscify/falscify-web-app/pulls/"${pr_number}
+          response=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" $url)
+          assignee=$(echo "${response}" | jq -r '.assignee.login')
+          head_branch=$(echo "${response}" | jq -r '.head.ref')
+          echo "assignee=${assignee}" >> $GITHUB_ENV
+          echo "head_branch=${head_branch}" >> $GITHUB_ENV
+
+      - name: Render comment template
+        id: render_template
+        uses: chuhlomin/render-template@v1.6
+        with:
+          template: .github/pr_push_comment.md
+          vars: |
+            assignee: \@${{ env.assignee }}
+            head: ${{ env.head_branch }}
+            pr_url: https://github.com/Falscify/falscify-web-app/pull/${GITHUB_PR_NUMBER}
+
+      - name: Create a bot comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+          repository: Falscify/falscify-web-app
+          issue-number: ${GITHUB_PR_NUMBER}
+          body: ${{ steps.render_template.outputs.result }}
+          reactions: eyes

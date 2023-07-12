@@ -1,0 +1,30 @@
+name: issue-open-comment
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  issue-open-comment:
+    name: issue-open-comment
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout the codebase
+        uses: actions/checkout@v2
+
+      - name: Render comment template
+        id: render_template
+        uses: chuhlomin/render-template@v1.6
+        with:
+          template: .github/issue_open_comment.md
+          vars: |
+            author: ${{ github.event.issue.user.login }}
+
+      - name: Create a bot comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+          repository: Falscify/falscify-web-app
+          issue-number: ${{ github.event.issue.number }}
+          body: ${{ steps.render_template.outputs.result }}
