@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
         with:
             fetch-depth: 0
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
             path: original-repo
 
       - name: Checkout forked repository
@@ -23,7 +23,7 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
           path: forked-repo
 
       - name: Before merge check
