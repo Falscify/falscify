@@ -15,7 +15,7 @@ jobs:
       - name: actions/stale@v7
         uses: actions/stale@v7
         with:
-          repo-token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-pr-message: 'There has been no activity in here for 7 days... You now have 1 more week before this PR is automatically closed.'
           close-pr-message: 'This PR was closed because it has been marked as stale for 7 days. Better luck next time!'
           days-before-issue-stale: -1
