@@ -206,12 +206,12 @@ if ($stmt = mysqli_query($con, $sql_fetch_institutions_query)) {
               // TODO Set up activation email once site goes live
               // We should edit ../../svn_repo/config.php to achieve this
               // ~f1lem0n
+              if(mail($email, $email_subject , nl2br($email_message), $email_header)) {
+                echo '<div class="message-container success-container">Success! Check your inbox for our confirmation email.</div>';
+              } else {
+                echo '<div class="message-container error-container">Failed to send activation e-mail.</div>';
+              }
 
-              // if(mail($email, $email_subject , nl2br($email_message), $email_header)) {
-              //   echo '<div class="message-container success-container">Success! Check your inbox for our confirmation email.</div>';
-              // } else {
-              //   echo '<div class="message-container error-container">Failed to send activation e-mail.</div>';
-              // }
               // Redirect after successful registration
               setcookie('registered', 1, time() + 30);
               header('Location: /en/home.php');
