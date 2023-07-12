@@ -1,5 +1,5 @@
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@100;400;600&display=swap");
 
 /* Custom properties */
 :root {
@@ -10,8 +10,8 @@
   --secondary-bg-color: #24252b;
   --hover-light-color: var(--light-color);
   --hover-dark-color: var(--primary-bg-color);
-  --transparent-light-color: rgba(255, 255, 255, .05);
-  --transparent-dark-color: rgba(0, 0, 0, .75);
+  --transparent-light-color: rgba(255, 255, 255, 0.05);
+  --transparent-dark-color: rgba(0, 0, 0, 0.75);
   --text-link-color: aqua;
   --blue-btn-color: #4a94d4;
   --green-btn-color: #75c9b7;
@@ -52,7 +52,7 @@ body {
   color: var(--light-color-alt);
   background-color: var(--primary-bg-color);
   letter-spacing: 1px;
-  transition: background-color .25s, color .25s;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 a {
@@ -98,7 +98,7 @@ button {
   align-items: center;
 }
 
-.orcid-btn{
+.orcid-btn {
   background-color: var(--primary-bg-color);
   border-radius: 25px;
   padding: 1.25rem;
@@ -107,7 +107,7 @@ button {
   margin: 1rem;
 }
 
-.orcid-logo{
+.orcid-logo {
   margin: 2px;
   width: 8rem;
 }
@@ -120,22 +120,21 @@ body.light-theme {
   --secondary-bg-color: #dfdfdf;
   --hover-light-color: #fff;
   --transparent-light-color: var(--btn-text-color);
-  --transparent-dark-color: rgba(0, 0, 0, .4);
+  --transparent-dark-color: rgba(0, 0, 0, 0.4);
   --text-link-color: blue;
   color: var(--btn-text-color);
 }
 
 /* Reusable classes */
 
-.body-text-container{
+.body-text-container {
   margin: 25rem 30% 40rem;
 }
 
 .paragraph {
   margin: 2rem 0;
 }
-idfppooter-
-.body-text-container > h2 {
+idfppooter- .body-text-container > h2 {
   margin-top: 6rem;
 }
 
@@ -162,7 +161,6 @@ idfppooter-
 .screen-s-hidden {
   display: none;
 }
-
 
 .list-right {
   display: flex;
@@ -205,7 +203,7 @@ idfppooter-
   background-color: var(--secondary-bg-color);
   opacity: 0;
   transform: scale(0);
-  transition: opacity .25s ease-in;
+  transition: opacity 0.25s ease-in;
 }
 
 .list {
@@ -237,6 +235,7 @@ idfppooter-
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 25px;
   font-weight: bold;
+  min-width: 7rem;
 }
 
 .logout-btn {
@@ -275,8 +274,8 @@ idfppooter-
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 25px;
   font-weight: bold;
+  min-width: 7rem;
 }
-
 
 .list-link:hover {
   color: var(--light-color);
@@ -300,7 +299,7 @@ idfppooter-
 }
 
 .header.activated {
-  box-shadow: 0 1px .5rem var(--transparent-light-color);
+  box-shadow: 0 1px 0.5rem var(--transparent-light-color);
 }
 
 .menu.activated {
@@ -316,7 +315,6 @@ idfppooter-
 .menu-toggle-icon.activated .close-menu-icon {
   display: block;
 }
-
 
 /* Search bar */
 .search-bar-container {
@@ -345,7 +343,6 @@ idfppooter-
   margin-left: 1rem;
 }
 
-
 /* Submission btn */
 .submission-btn-container {
   display: flex;
@@ -364,8 +361,8 @@ idfppooter-
   background-color: var(--green-btn-color);
 }
 
-.submission-btn>.ri-check-line {
-  margin-left: .5rem;
+.submission-btn > .ri-check-line {
+  margin-left: 0.5rem;
 }
 
 /* Footer */
@@ -399,9 +396,8 @@ idfppooter-
 }
 
 .copyright-notice {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 
 /* Login form */
 form {
@@ -441,12 +437,12 @@ form > label {
   margin-left: 15%;
 }
 
-form>.login-btn {
+form > .login-btn {
   margin: 1rem;
   width: 10rem;
 }
 
-form>.register-btn {
+form > .register-btn {
   margin: 1rem;
   width: 10rem;
 }
@@ -464,7 +460,6 @@ form>.register-btn {
   border: var(--common-border);
 }
 
-
 #orcidAuthButton {
   display: flex;
   flex-direction: row;
@@ -476,7 +471,7 @@ form>.register-btn {
   border-radius: 25px;
   background-color: var(--primary-bg-color);
   margin: 2rem auto 1rem auto;
-  padding: .6rem;
+  padding: 0.6rem;
   cursor: pointer;
   color: var(--light-color);
   text-decoration: none;
@@ -486,7 +481,7 @@ form>.register-btn {
   min-height: 100vh;
 }
 
-#orcidWidget.small{
+#orcidWidget.small {
   width: auto;
   font-size: 14px;
   line-height: 16px;
@@ -506,7 +501,7 @@ form>.register-btn {
   display: block;
   position: relative;
   padding: 1em;
-  color: #494A4C;
+  color: #494a4c;
   text-align: center;
 }
 
@@ -525,11 +520,9 @@ form>.register-btn {
   text-align: center;
 }
 
-
 .btn.container {
   text-align: center;
 }
-
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -574,12 +567,12 @@ form>.register-btn {
 .middle-img:hover,
 .side-img:hover {
   scale: 102%;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
   box-shadow: 0 0 10px var(--img-shadow-color);
-  transition: .25s;
+  transition: 0.25s;
 }
 
 figcaption {
@@ -613,7 +606,7 @@ figcaption {
     transform: scale(1);
   }
 
-  .menu>.list {
+  .menu > .list {
     flex-direction: row;
     border: 0 auto;
   }
@@ -646,7 +639,6 @@ figcaption {
     margin-top: auto;
   }
 }
-
 
 /* WIP */
 .container.wip {
