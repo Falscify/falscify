@@ -1,0 +1,45 @@
+name: pr-before-merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+jobs:
+  before-merge:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout original repository
+        uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+            token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+            path: original-repo
+
+      - name: Checkout forked repository
+        if: ${{ github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name }}
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+          path: forked-repo
+
+      - name: Before merge check
+        run: |
+          GIT_TARGET="git --git-dir=original-repo/.git"
+          LAST_TARGET_COMMIT_SHA="$($GIT_TARGET rev-parse '${{ github.event.pull_request.base.ref }}')"
+          if ${{ github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name }}; then
+            GIT_SOURCE="git --git-dir=forked-repo/.git"
+          else
+            GIT_SOURCE=$GIT_TARGET
+          fi
+          if $GIT_SOURCE branch -a --contains $LAST_TARGET_COMMIT_SHA | grep -q "remotes/origin/${{ github.head_ref }}"; then
+            echo "Branch remotes/origin/${{ github.head_ref }} contains commit $LAST_TARGET_COMMIT_SHA"
+          else
+            echo "Branch remotes/origin/${{ github.head_ref }} does not contain commit $LAST_TARGET_COMMIT_SHA"
+            echo "Is seems that there are some new commits in the target branch..."
+            echo "You should merge them to HEAD first, then proceed with adding your changes."
+            exit 1
+          fi

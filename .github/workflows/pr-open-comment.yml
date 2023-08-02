@@ -1,0 +1,33 @@
+name: pr-open-comment
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  pr-open-comment:
+    name: pr-open-comment
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout the codebase
+        uses: actions/checkout@v2
+
+      - name: Delay
+        run: sleep 30s
+
+      - name: Render comment template
+        id: render_template
+        uses: chuhlomin/render-template@v1.6
+        with:
+          template: .github/pr_open_comment.md
+          vars: |
+            author: ${{ github.event.pull_request.user.login }}
+
+      - name: Create a bot comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.FALSCIFY_BOT_TOKEN }}
+          repository: Falscify/falscify-web-app
+          issue-number: ${{ github.event.pull_request.number }}
+          body: ${{ steps.render_template.outputs.result }}
